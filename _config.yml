@@ -1,0 +1,14 @@
+title: "Atelier de Programmation"
+author: "Stéphane Calderoni (m1cr0lab)"
+organization: "Robotic 974"
+date: "2022-12-16T19:00:00+0400"
+description: "L’objectif de cet atelier est de programmer un petit jeu de réflexe sur une carte Arduino, orchestré par une machine à états finis, que l’on nomme également un automate fini."
+keywords: "arduino,arduino-nano,arduino-uno,programmation,c,cpp,automate-fini"
+timezone: Indian/Reunion
+
+sass:
+  style: compressed
+  sourcemap: never
+
+plugins:
+  - jemoji

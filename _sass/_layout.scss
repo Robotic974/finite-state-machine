@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 12pt;
+    background-color: hsl(210, 10, 7);
+    color: hsl(210, 20, 50);
+    line-height: 1.75rem;
+    text-align: justify;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    margin: 0 2em 4em 2em;
+}
+
+.page { max-width: 768px; }
+
+h1, h2, h3 {
+    margin: 2em 0 1.25em 0;
+    color: #fff;
+}
+
+strong { color: hsl(210, 40, 60); }
+
+a {
+    text-decoration: none;
+    color: hsl(210, 100, 60);
+    &:hover { color: hsl(210, 100, 70); }
+    &.button {
+        display: inline-block;
+        margin: .5em auto;
+        padding: .5rem 1rem;
+        border-radius: 8px;
+        background: linear-gradient(hsl(210, 100, 50), hsl(210, 100, 30));
+        color: #fff;
+        box-shadow: 0 4px 8px #000;
+        &:hover { background: linear-gradient(hsl(210, 100, 60), hsl(210, 100, 40)); }
+    }
+}
+
+.repo { margin: -.5em 0 2em 0; }
+
+.robotic974 {
+
+    width: 128px;
+    height: 128px;
+    margin: 0 0 1rem 3rem;
+    background-image: url('../images/robotic974-256x256.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    // filter: drop-shadow(0 4px 8px #000);
+
+}
+
+.note {
+    width: 50%;
+    margin: 1.5em auto;
+    padding: .5em 1em;
+    border-radius: 1em;
+    background-color: hsl(210, 30, 12);
+    box-shadow: 0 4px 8px rgba(#000, .25);
+}
+
+.media {
+
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto;
+
+    &.media-50 { width: 50%; }
+
+}
+
+.caption {
+
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.center   { text-align: center;           }
+.round-8  { border-radius: 8px;           }
+.shadow   { box-shadow: 0 4px 8px #000; }
+.emphasis { color: hsl(180, 50, 50);    }
+.emoji    { vertical-align: -15%;         }
+
+.github {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: .5em;
+    vertical-align: -8%;
+    background-image: url('../images/github.svg');
+}
+
+.boards {
+
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 300px;
+    margin: 1.5rem auto;
+    background-color: #fff;
+
+    .board {
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &.uno  { flex-grow: 2; background-image: url('../images/uno-board.jpg');  }
+        &.nano { flex-grow: 1; background-image: url('../images/nano-board.jpg'); }
+
+    }
+    
+}
