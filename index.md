@@ -8,7 +8,7 @@ title: Implémentation d’une Machine à États Finis
 <span class="github"></span> [Code source][src]{: target="_blank" }
 {: .repo }
 
-<div class="robotic974" style="float:right"></div>
+<div class="robotic974"></div>
 
 
 ## Aperçu global
@@ -25,7 +25,7 @@ title: Implémentation d’une Machine à États Finis
 
 ## Objectif de l'atelier
 
-L'objectif de cet atelier est de programmer un petit jeu de réflexe sur une carte Arduino, orchestré par une ***machine à états finis***, que l'on nomme également un ***automate fini***. Chaque joueur dispose d'un bouton poussoir et d'une LED témoin. Le jeu consiste à appuyer sur le bouton pour allumer la LED en étant plus rapide que son adversaire. Le top départ est donné par un flash des deux LEDs, après une période d'attente pendant laquelle les LEDs clignotent alternativement. Si un joueur appuie sur sur son bouton avant le top départ, il perd la partie. Le vainqueur est signalé par l'allumage de sa LED pendant 2 secondes.
+L'objectif de cet atelier est de programmer un petit jeu de réflexe sur une carte Arduino, orchestré par une ***machine à états finis***, que l'on nomme également un ***automate fini***. Chaque joueur dispose d'un bouton poussoir et d'une LED témoin. Le jeu consiste à appuyer sur le bouton pour allumer la LED en étant plus rapide que son adversaire. Le top départ est donné par un flash des deux LEDs, après une période d'attente pendant laquelle les LEDs clignotent alternativement. Si un joueur appuie sur son bouton avant le top départ, il perd la partie. Le vainqueur est signalé par l'allumage de sa LED pendant 2 secondes.
 
 <video autoplay loop muted preload="auto" class="media media-50 round-8 shadow">
     <source src="{{ 'assets/videos/demo.mp4' | relative_url }}" type="video/mp4">
@@ -105,10 +105,10 @@ L'idée générale, pour implémenter un automate fini, est de définir **l'ense
 
 ```cpp
 enum class State : uint8_t {
-    RESET,     // (ré)initialisation de la partie
-    GET_READY, // période d'attente du top départ
-    PLAY,      // phase compétitive du jeu
-    STOP       // suspension de la partie après affichage du vainqueur
+    RESET,     // (Ré)initialisation de la partie
+    GET_READY, // Période d'attente du top départ
+    PLAY,      // Phase compétitive du jeu
+    STOP       // Suspension de la partie après affichage du vainqueur
 };
 ```
 
@@ -123,10 +123,10 @@ State state;
 Le programme principal s'articule alors de la manière suivante :
 
 ```cpp
-void reset()    {} // Routine à exécuter dans l'état State::RESET
-void getReady() {} // Routine à exécuter dans l'état State::GET_READY
-void play()     {} // Routine à exécuter dans l'état State::PLAY
-void stop()     {} // Routine à exécuter dans l'état State::STOP
+void reset()    {} // Routine à exécuter dans l'état RESET
+void getReady() {} // Routine à exécuter dans l'état GET_READY
+void play()     {} // Routine à exécuter dans l'état PLAY
+void stop()     {} // Routine à exécuter dans l'état STOP
 
 void setup() {     // Initialisation du programme
 
@@ -205,7 +205,7 @@ class Player {
 
 Il vous appartiendra de compléter éventuellement cette déclaration avec les éléments que vous jugerez utiles au bon fonctionnement du programme. Vous devrez également écrire le fichier d'implémentation `Player.cpp` qui définit précisément le fonctionnement de chaque méthode de la classe.
 
-Votre projet devra donc être organisé de la façon suivante :
+L'organisation de votre projet devrait alors être la suivante :
 
 ```
 finite-state-machine
@@ -304,7 +304,10 @@ void loop() {
 
 ## Solution et code source complet
 
-Lorsque vous aurez terminé cet exercice et obtenu un programme fonctionnel, ou si vous vous arrachez les cheveux sans être parvenu au résultat attendu, vous pourrez aller jeter un coup d'oeil sur [le code source de la solution][src] que je vous propose.  :wink:
+Lorsque vous aurez terminé cet exercice et obtenu un programme fonctionnel, ou si vous vous arrachez les cheveux sans être parvenu au résultat attendu, vous pourrez aller jeter un coup d'oeil sur le code source de la solution que je vous propose.  :wink:
+
+[Accéder au code source de la solution][src]{: .button target="_blank" }
+{: .center }
 
 
 [src]:    https://github.com/Robotic974/finite-state-machine
